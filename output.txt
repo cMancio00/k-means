@@ -1,18 +1,18 @@
+=====5000====
+Numba: 5000 points fitted in: 3.5288 seconds
+Joblib_1: 5000 points fitted in: 80.4298 seconds
+Joblib_2: 5000 points fitted in: 52.1189 seconds
+Joblib_4: 5000 points fitted in: 39.1091 seconds
+Joblib_-1: 5000 points fitted in: 19.1136 seconds
+=====7500====
+Numba: 7500 points fitted in: 5.8069 seconds
+Joblib_1: 7500 points fitted in: 151.4988 seconds
+Joblib_2: 7500 points fitted in: 98.7612 seconds
+Joblib_4: 7500 points fitted in: 63.2441 seconds
+Joblib_-1: 7500 points fitted in: 34.4307 seconds
 =====10000====
-Numba: 10000 points fitted in: 1.1832 seconds
-Joblib_1: 10000 points fitted in: 0.9100 seconds
-Joblib_2: 10000 points fitted in: 2.2218 seconds
-Joblib_4: 10000 points fitted in: 3.5582 seconds
-Joblib_-1: 10000 points fitted in: 15.5135 seconds
-=====10000====
-Numba: 10000 points fitted in: 0.0933 seconds
-Joblib_1: 10000 points fitted in: 1.2987 seconds
-Joblib_2: 10000 points fitted in: 4.8147 seconds
-Joblib_4: 10000 points fitted in: 5.6754 seconds
-Joblib_-1: 10000 points fitted in: 7.2783 seconds
-=====100000====
-Numba: 100000 points fitted in: 3.6224 seconds
-Joblib_1: 100000 points fitted in: 37.5218 seconds
-Joblib_2: 100000 points fitted in: 37.6488 seconds
-Joblib_4: 100000 points fitted in: 68.2792 seconds
-Joblib_-1: 100000 points fitted in: 87.4089 seconds
+Numba: 10000 points fitted in: 7.7299 seconds
+Joblib_1: 10000 points fitted in: 222.8223 seconds
+Joblib_2: 10000 points fitted in: 114.4596 seconds
+Joblib_4: 10000 points fitted in: 84.9274 seconds
+Joblib_-1: 10000 points fitted in: 55.8627 seconds

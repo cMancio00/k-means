@@ -3,17 +3,17 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 import time
-from numba import njit
+from numba import njit, prange
 sns.set_theme(style="whitegrid")
 
 def generate_random_points(n, dim):
     return np.random.rand(n, dim).astype(np.float32)
 
-@njit
+@njit(parallel=True)
 def compute_label_numba(point, centroids):
     k = centroids.shape[0]
     distances = np.empty(k)
-    for i in range(k):
+    for i in prange(k):
         distances[i] = np.linalg.norm(point - centroids[i])
     return np.argmin(distances)
 
@@ -54,28 +54,23 @@ class KMeans:
 
 if __name__ == "__main__":
     np.random.seed(111)
-    sizes = [10000, 10000, 100000]
-    n_jobs = [1,2,4,-1]
+    sizes = [5000, 7500, 10000] 
+    n_jobs = [1, 2, 4, -1]
+    k = 1000
     for n in sizes:
         print(f"====={n}====")
-        points = generate_random_points(n, 2)
+        points = generate_random_points(n, 100)
         
-        kmeans_numba = KMeans(points, k=3, use_numba=True)
+        kmeans_numba = KMeans(points, k=k, use_numba=True)
         start_time = time.time()
         kmeans_numba.fit()
         end_time = time.time()
         print(f"Numba: {n} points fitted in: {end_time - start_time:.4f} seconds")
 
         for n_job in n_jobs:
-            kmeans_joblib = KMeans(points, k=3, use_numba=False)
+            kmeans_joblib = KMeans(points, k=k, use_numba=False)
             start_time = time.time()
             kmeans_joblib.fit(n_jobs=n_job)
             end_time = time.time()
             print(f"Joblib_{n_job}: {n} points fitted in: {end_time - start_time:.4f} seconds")
 
-        plt.figure(figsize=(10, 8))
-        sns.scatterplot(x=points[:, 0], y=points[:, 1], hue=kmeans_joblib.labels, palette='deep', s=10)
-        sns.scatterplot(x=kmeans_joblib.centroids[:, 0], y=kmeans_joblib.centroids[:, 1], color='red', s=200, marker='X')
-        plt.title(f'K-Means Clustering for {n} Points')
-        plt.savefig(f'plots/kmeans_clustering_{n}.png')
-        plt.close()
