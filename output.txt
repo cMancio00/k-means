@@ -1,0 +1,18 @@
+=====10000====
+Numba: 10000 points fitted in: 1.1832 seconds
+Joblib_1: 10000 points fitted in: 0.9100 seconds
+Joblib_2: 10000 points fitted in: 2.2218 seconds
+Joblib_4: 10000 points fitted in: 3.5582 seconds
+Joblib_-1: 10000 points fitted in: 15.5135 seconds
+=====10000====
+Numba: 10000 points fitted in: 0.0933 seconds
+Joblib_1: 10000 points fitted in: 1.2987 seconds
+Joblib_2: 10000 points fitted in: 4.8147 seconds
+Joblib_4: 10000 points fitted in: 5.6754 seconds
+Joblib_-1: 10000 points fitted in: 7.2783 seconds
+=====100000====
+Numba: 100000 points fitted in: 3.6224 seconds
+Joblib_1: 100000 points fitted in: 37.5218 seconds
+Joblib_2: 100000 points fitted in: 37.6488 seconds
+Joblib_4: 100000 points fitted in: 68.2792 seconds
+Joblib_-1: 100000 points fitted in: 87.4089 seconds
