@@ -49,3 +49,11 @@ NUMA:
   NUMA node(s):           1
   NUMA node0 CPU(s):      0-15
 ```
+
+## Results
+
+A speed up plot can be found in below:
+![speedup](plots/numbaJoblibSpeedUp.png)
+ `Numba` speedup is way higher than `joblib`.
+ For reference we include just the `joblib` speed up.
+ ![speedup](plots/JoblibSpeedUp.png)
