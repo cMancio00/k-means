@@ -53,7 +53,10 @@ NUMA:
 ## Results
 
 A speed up plot can be found in below:
+
 ![speedup](plots/numbaJoblibSpeedUp.png)
+
  `Numba` speedup is way higher than `joblib`.
  For reference we include just the `joblib` speed up.
+ 
  ![speedup](plots/JoblibSpeedUp.png)
